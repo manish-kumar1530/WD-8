@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Form</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 20px;
+            background-color:#63b4f7;
+            color: #102E50;
+            line-height: 1.6;
+        }
+
+        .form-header{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-header h1{
+            font-size: 2.5rem;
+            color: #000;
+        }
+        .form-header h2{
+            font-size: 1.3rem;
+            color: #000;
+        }
+        .form-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .booking-form{
+            background-color:rgb(174, 238, 204);
+            color: #102E50;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .booking-form label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .submit-btn{
+            display: block;
+            width: 100%;
+            background-color:#102E50;
+            color: white;
+            font-size: 1rem;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .submit-btn:hover{
+            background-color: #63b4f7;
+        }
+        .booking-form input::placeholder{
+                color: rgb(70, 154, 250);
+                opacity: 1;
+                transition: opacity 250ms ease-in-out;
+        }
+        .booking-form option{
+            color:rgb(70, 154, 250) ;
+        }
+        .booking-form select{
+            color:rgb(70, 154, 250) ;
+        }
+        .booking-form textarea::placeholder{
+            color: rgb(70,154,250);
+        }
+        #date{
+            color: rgb(70,154,250);
+        }
+
+    </style>
+</head>
+<body>
+    <header class="form-header">
+        <h1>Mountains Travels Booking form</h1>
+        <h2>Please read the booking conditions carefully before completing this form . After read this conditions then you will fill this form, please note that no booking will be made until complete the form.</h2>
+    </header>
+    <section class="form-container">
+        <form action="#" method="post" class="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your full name" required />
+
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required />
+            
+            <label for="tel">Mobile No.:</label>
+            <input type="tel" name="tel" id="tel" maxlength="13" placeholder="Enter your mobile number">
+
+            <label for="address">Address:</label>
+            <input type="text" name="Address" id="Address"  placeholder="Enter your complete Address" required/>
+
+            <label for="destination">Select Destination</label>
+            <select id="destination" name="destination" required>
+                <option value="">Choose a destination</option>
+                <option value="everest">Mount Everest</option>
+                <option value="rocky">Rocky Mountains</option>
+                <option value="alps">Swiss Alps</option>
+                <option value="andes">Andes Mountains</option>
+            </select>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" name="date" id="date" required/>
+
+            <label for="total-members">Total Members:</label>
+            <input type="number" name="total-members" id="total-members" min="1" placeholder="Enter number of members" required/>
+
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" placeholder="Any special requests or Details" rows="4"></textarea>
+
+            <button type="submit" class="submit-btn">Submit Form</button>
+        </form>
+    </section>
+</body>
+</html>
